@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Projeto 4 – Formulário</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="nav__logo"><i class="fas fa-rocket"></i> MeuSite</a>
+    <nav>
+      <ul class="nav__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html" class="active">Formulário</a></li>
+        <li><a href="page3.html">Página 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 data-aos="fade-up">Cadastro de Usuário</h2>
+    <form id="cadForm" novalidate data-aos="fade-up" data-aos-delay="100">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <!-- cada label animado ao foco -->
+        <label>
+          <i class="fas fa-user"></i> Nome*
+          <input type="text" id="nome" required>
+          <small class="error" id="err-nome"></small>
+        </label>
+        <label>
+          <i class="fas fa-envelope"></i> E-mail*
+          <input type="email" id="email" required>
+          <small class="error" id="err-email"></small>
+        </label>
+        <label>
+          <i class="fas fa-id-card"></i> CPF*
+          <input type="text" id="cpf" placeholder="123.456.789-09" required>
+          <small class="error" id="err-cpf"></small>
+        </label>
+        <label>
+          <i class="fas fa-birthday-cake"></i> Idade*
+          <input type="number" id="idade" min="1" required>
+          <small class="error" id="err-idade"></small>
+        </label>
+        <label>
+          <i class="fas fa-phone"></i> Telefone*
+          <input type="tel" id="telefone" placeholder="(11) 91234-5678" required>
+          <small class="error" id="err-tel"></small>
+        </label>
+        <label>
+          <i class="fas fa-calendar-alt"></i> Nascimento
+          <input type="date" id="nasc">
+        </label>
+        <label>
+          <i class="fas fa-venus-mars"></i> Sexo
+          <select id="sexo">
+            <option value="">-- selecione --</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outro</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset data-aos="fade-up" data-aos-delay="200">
+        <legend>Endereço</legend>
+        <label>
+          <i class="fas fa-map-marker-alt"></i> CEP*
+          <input type="text" id="cep" placeholder="00000-000" required>
+          <small class="error" id="err-cep"></small>
+        </label>
+        <label>
+          Logradouro*
+          <input type="text" id="logradouro" required>
+          <small class="error" id="err-log"></small>
+        </label>
+        <label>
+          Bairro*
+          <input type="text" id="bairro" required>
+          <small class="error" id="err-bai"></small>
+        </label>
+        <label>
+          Cidade*
+          <input type="text" id="cidade" required>
+          <small class="error" id="err-cid"></small>
+        </label>
+        <label>
+          Estado*
+          <input type="text" id="estado" required>
+          <small class="error" id="err-est"></small>
+        </label>
+      </fieldset>
+
+      <fieldset data-aos="fade-up" data-aos-delay="300">
+        <legend>Informações Adicionais</legend>
+        <label>
+          <i class="fas fa-check-square"></i> Interesses:
+          <br>
+          <label><input type="checkbox" name="interesse" value="Tech"> Tech</label>
+          <label><input type="checkbox" name="interesse" value="Arte"> Arte</label>
+          <label><input type="checkbox" name="interesse" value="Esporte"> Esporte</label>
+        </label>
+        <label>
+          <i class="fas fa-comment"></i> Observações
+          <textarea id="obs" rows="4"></textarea>
+        </label>
+        <label>
+          <i class="fas fa-upload"></i> Enviar Arquivo
+          <input type="file" id="arquivo">
+        </label>
+      </fieldset>
+
+      <button type="submit" class="btn" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-paper-plane"></i> Enviar
+      </button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Projeto 4 — Desenvolvimento Web</p>
+  </footer>
+
+  <!-- libs e scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
